@@ -3,6 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1-orange.svg)](CLAIMS_RUBRIC.md)
 
+<p align="center">
+  <img src="docs/assets/claims-rubric-hero.png" width="100%" alt="Denied-Environment Autonomy — Public Claims Rubric"/>
+</p>
+
 **Thesis: low maturity is not a flaw. Low maturity with absolute language is.**
 
 A neutral, IP-compatible rubric for evaluating public performance claims about autonomous systems under electronic warfare, GNSS denial, or datalink denial.
