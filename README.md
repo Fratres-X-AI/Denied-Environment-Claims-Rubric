@@ -13,9 +13,14 @@ A neutral, IP-compatible rubric for evaluating public performance claims about a
 
 Nothing in it requires disclosing algorithms, mathematics, hardware topology, or any other proprietary implementation detail. It asks only for the minimum public disclosure that makes a claim evaluable: maturity, denial assumptions, sensor dependencies, error growth, environmental limits, and evidence class.
 
+The goal is better engineering communication, not public prosecution. Apply the
+same standard to your own work before applying it to anyone else's.
+
 ## Score a claim
 
-Open **[CLAIMS_RUBRIC.md](CLAIMS_RUBRIC.md)**. Score six dimensions 0–2 each (max 12).
+Start with **[CLAIMS_RUBRIC.md](CLAIMS_RUBRIC.md)**, then use the
+[claim worksheet](templates/CLAIM_WORKSHEET.md) to record the claim, evidence,
+limits, and score. Score six dimensions 0–2 each (max 12).
 
 | Total | Reading |
 | --- | --- |
@@ -37,6 +42,17 @@ Open **[CLAIMS_RUBRIC.md](CLAIMS_RUBRIC.md)**. Score six dimensions 0–2 each (
 ## Worked example
 
 The rubric includes a self-score of [HEEL-G RUT](https://github.com/Fratres-X-AI/RUT) (11/12) — an open ground-traversability layer, not an EW system — to show that the rubric penalizes language/evidence mismatch, not low maturity.
+
+Additional reusable material:
+
+- [Evidence manifest](templates/EVIDENCE_MANIFEST.json) — a public-safe schema for
+  recording test class, sample size, conditions, and pass/fail criteria.
+- [Honest technical announcement](templates/PUBLIC_POST_TEMPLATE.md) — a
+  copyable format for publishing progress without overclaiming.
+- [Worked scoring examples](examples/WORKED_EXAMPLES.md) — bounded, anonymized
+  examples across concept, bench, and field evidence.
+- [Contribution guide](CONTRIBUTING.md) — how to improve the rubric without
+  turning it into a company or person rating system.
 
 ## Citation
 

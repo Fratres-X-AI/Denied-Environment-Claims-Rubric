@@ -1,0 +1,55 @@
+{
+  "manifest_version": "0.1",
+  "claim_id": "replace-with-stable-id",
+  "claim_text": "State one bounded technical claim.",
+  "system_scope": "component | subsystem | integrated_system",
+  "maturity": {
+    "trl": null,
+    "trl_attaches_to": "component | subsystem | integrated_system",
+    "maturity_reference": "NASA NPR 7123.1 or applicable national equivalent"
+  },
+  "denial_model": {
+    "channels": [],
+    "threat_class": [],
+    "onset": "launch | mid_mission | intermittent | not_stated",
+    "geometry": "State relevant geometry or write not_stated."
+  },
+  "dependencies": [
+    {
+      "channel": "sensor_or_external_dependency",
+      "class": "State class or grade if public.",
+      "failure_or_degradation_mode": "State known limit."
+    }
+  ],
+  "performance_envelope": {
+    "metric": "e.g. horizontal error at 95 percent",
+    "value": null,
+    "unit": "replace",
+    "distance_or_duration": null,
+    "conditions": []
+  },
+  "environment": {
+    "illumination": "not_stated",
+    "weather": "not_stated",
+    "terrain": "not_stated",
+    "temperature": "not_stated",
+    "emi_environment": "not_stated",
+    "platform_constraints": "not_stated"
+  },
+  "evidence": [
+    {
+      "id": "E-001",
+      "class": "E0 | E1 | E2 | E3 | E4",
+      "description": "Describe the evidence without exposing protected implementation.",
+      "sample_count": null,
+      "pass_fail_criteria_predeclared": false,
+      "truth_source_independent": false,
+      "public_reference": null,
+      "publicly_verifiable": false
+    }
+  ],
+  "limits": [
+    "State what this evidence does not prove."
+  ],
+  "review_status": "self_reported | independently_reviewed | unverified"
+}
