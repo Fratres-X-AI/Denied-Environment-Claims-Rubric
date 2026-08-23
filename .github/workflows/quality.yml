@@ -1,0 +1,53 @@
+name: Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate evidence manifest
+        run: python -m json.tool templates/EVIDENCE_MANIFEST.json >/dev/null
+
+      - name: Check required public package
+        run: |
+          test -f README.md
+          test -f CLAIMS_RUBRIC.md
+          test -f CONTRIBUTING.md
+          test -f templates/CLAIM_WORKSHEET.md
+          test -f templates/EVIDENCE_MANIFEST.json
+          test -f templates/PUBLIC_POST_TEMPLATE.md
+          test -f examples/WORKED_EXAMPLES.md
+
+      - name: Check local Markdown links
+        shell: python
+        run: |
+          import pathlib
+          import re
+          import sys
+
+          root = pathlib.Path(".").resolve()
+          pattern = re.compile(r"\]\(([^)]+)\)")
+          missing = []
+          for path in root.rglob("*.md"):
+              if ".git" in path.parts:
+                  continue
+              for target in pattern.findall(path.read_text(encoding="utf-8")):
+                  clean = target.split("#", 1)[0]
+                  if not clean or clean.startswith(("http://", "https://", "mailto:")):
+                      continue
+                  if not (path.parent / clean).resolve().exists():
+                      missing.append(f"{path}: {target}")
+          if missing:
+              print("\n".join(missing))
+              sys.exit(1)
+          print("Markdown links valid")
